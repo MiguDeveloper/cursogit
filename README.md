@@ -5,3 +5,4 @@ descripcion comandos git
 - crear una rama(si ya esta creada se mueve solamente) y moverse a elle en un solo paso:
 - $ git checkout -b "homolocacion"
 
+Este es un cambio ingresado desde github
