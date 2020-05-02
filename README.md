@@ -36,5 +36,36 @@ Igual que podemos establecer reglas de exclusión tanto a nivel global como a ni
 - No acabes el commit con un punto
 - Utiliza el modo imperativo al escribir
 - Utiliza el cuerpo para explicar el 'que' y el 'por qué" del commit
-- [] Admin
-- [] header
+
+## Tips para unas buenas descripciones de Pull/Merge Request
+
+- El titulo del PR no ha de pasar los 72 carácteres
+- Si la PR toca algo de la UI añadir un screenshot
+- Si es algo de código muy complejo añadir algún grafico(UML)
+
+## Estrategias de integración  entre ramas
+
+- para poder apreciar la graficamente los commits e integraciones podemos usar el comando ```git log --graph --abbrev-commit --online```
+
+git log
+
+- Cualquier herramienta es más visualmente atractiva que el ```git log``` de consola. Aún así creo que merece la pena aprender un par de cosas sobre cómo usarla y especialmente los rangos de commits:
+
+- ```git log master feature-with-merge```. Muestra el histórico conjunto de todas las ramas (y commits) que le indiquemos. ```Git log``` sin argumentos muestra únicamente HEAD (la rama actual).
+
+- ```git log --all```. Un atajo para visualizar todas las ramas del repositorio.
+
+- ```git log master..feature-with-merge```. Muestra todos los commits que tiene la rama feature-with-merge que NO tiene master. Útil para revisar el trabajo que se ha hecho exclusivamente durante una feature o un bugfix.
+
+- ```git log feature-with-merge..master```. Lo mismo que el anterior pero al revés, lógicamente. Útil cuando quieres saber cómo de desactualizado estás con la rama con la que te vas a integrar.
+
+- Particularmente encuentro difícil recordar en qué lado del rango tengo que poner cada rama (¿los nuevos commits son los de la derecha o los de la izquierda?). Por eso es útil esta última posibilidad:
+
+    - ```git log master...feature-with-merge``` (nótense los 3 puntos y no 2). Muestra únicamente los commits que tienen distintos ambas ramas respecto de cada una. Equivale a:
+
+    - ```git log master..feature-with-merge && git log feature-with-merge..master```
+
+- la suelo usar con un flag para marcar de dónde viene cada commit:
+
+    - ```git log --left-right master...feature-with-merge```. Te marca los commits exclusivos del lado derecho (feature-with-merge) con > y los del lado izquierdo con <.
+
