@@ -77,7 +77,7 @@ Git Revert
 
 - Si queremos deshacer el ultimo commit podemos aplicar el comando ```git undo````
 
-- Si por ejemplo se ha eliminado un archivo en master y hacemos un merge con nuestra rama local podemos descartar esos cambios con: git discart
+- Si por ejemplo se ha eliminado un archivo en master y hacemos un merge con nuestra rama local podemos descartar esos cambios con: git discard
 
 - Si queremos ingresar unos cambios en el ultimo commit podemos usar: ```git commit --amend```
 
