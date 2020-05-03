@@ -49,6 +49,8 @@ Igual que podemos establecer reglas de exclusión tanto a nivel global como a ni
 
 git log
 
+- ```git log --oneline``` nos permite mostrar los commit en una linea todos y no mostrar mucho detalle.
+
 - Cualquier herramienta es más visualmente atractiva que el ```git log``` de consola. Aún así creo que merece la pena aprender un par de cosas sobre cómo usarla y especialmente los rangos de commits:
 
 - ```git log master feature-with-merge```. Muestra el histórico conjunto de todas las ramas (y commits) que le indiquemos. ```Git log``` sin argumentos muestra únicamente HEAD (la rama actual).
@@ -69,3 +71,14 @@ git log
 
     - ```git log --left-right master...feature-with-merge```. Te marca los commits exclusivos del lado derecho (feature-with-merge) con > y los del lado izquierdo con <.
 
+Git Revert
+
+- Para los casos en que hallamos ingresado un bug a master podemos ejecutar el comando ```git revert @```
+
+- Si queremos deshacer el ultimo commit podemos aplicar el comando ```git undo````
+
+- Si por ejemplo se ha eliminado un archivo en master y hacemos un merge con nuestra rama local podemos descartar esos cambios con: git discart
+
+- Si queremos ingresar unos cambios en el ultimo commit podemos usar: ```git commit --amend```
+
+- Usamos ```git show hash_del_commit``` y podemos ver los detalles del commit
