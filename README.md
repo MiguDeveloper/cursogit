@@ -82,3 +82,12 @@ Git Revert
 - Si queremos ingresar unos cambios en el ultimo commit podemos usar: ```git commit --amend```
 
 - Usamos ```git show hash_del_commit``` y podemos ver los detalles del commit
+
+- ```git reset --mixed``` Otra opción que encuentro interesante de git reset es el flag --mixed. Este te aborta el reset si ve que alguno de los ficheros que se van a "deshacer" está modificado en nuestra copia local, de forma que no perdamos cambios accidentalmente.
+
+## Detectando cuando se metio un bug en nuestro codigo usando git
+
+- Para ello nos apoyamos en el comando ```git bisect start sha_commitfinal sha_commitinicio``` detectado el commit lo marcamos como bueno con ```git bisect good```
+
+- para salir del bisect ejecutamos el comando ```git bisect reset```
+
