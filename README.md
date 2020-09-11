@@ -5,6 +5,8 @@ Descripcion comandos git
 
 - Listar las ramas en local: ```$ git branch``` y si deseamos ver las ramas en remoto que estan alineadas en local: ```git branch -a```, ojo pero no nos listara todas, si en caso hubieran creado otras recientemente, para estar actualizado de las demas ramas existente ejecutamos el siguiente comando: ```$ git fetch origin```,  y si queremos que se saquen las referencias a las ramas que ya no existen ejecutamos ```$ git fetch -ap```
 
+- Regresar al último commit ```git checkout -- .```
+
 Alias de GIT
 - Para mac por ejemplo podemos ejecutar ```$ vim $HOME/.gitconfig```, una vez abierto el archivo de configuración agregamos(de no tenerlo) las siguientes lineas ```[alias] st = status```, y lo podemos verificar revisando el .gitconfig con: ```$ cat $HOME/.gitconfig```
 
