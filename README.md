@@ -1,5 +1,9 @@
 Descripcion comandos git
 
+- Creacion de tag de commits usamos el `git tag` creamos una etiqueta para el commit en curso de esta manera en ves usar el SHA del commit etiquetamos y le ponemos una version a ese commit por ejemplo `git tag "v1.0.0"` y si deseas ver el tag creado ejecutamos `git tag` y si queremos subir el tag ejecutamos `git push --tag`
+- Para hacer un commit inmediato con add `git add .` y `git commit -m "mensaje"` en un solo comando hacemos `git commit -am "detalle del comit"` recordemos que si tenemos un untracked no lo agregara solo los que tenemos en el working tree, para agregar los untracked debemos de usar primero el `git add .`
+- Crear una rama(si ya esta creada se mueve solamente) y moverse a ella en un solo paso: `$ git checkout -b "homologacion"`
+
 - Creacion de tag de commits usamos el `git tag` creamos una etiqueta para el commit en curso de esta manera en ves usar el SHA del commit etiquetamos y le ponemos una version a ese commit por ejemplo `git tag "v1.0.0"`
 - Para hacer un commit inmediato con add `git add .` y `git commit -m "mensaje"` en un solo comando hacemos `git commit -am "detalle del comit"` recordemos que si tenemos un untracked no lo agregara solo los que tenemos en el working tree, para agregar los untracked debemos de usar primero el `git add .`
 - Crear una rama(si ya esta creada se mueve solamente) y moverse a ella en un solo paso: `$ git checkout -b "homologacion"`
@@ -7,6 +11,8 @@ Descripcion comandos git
 - Listar las ramas en local: `$ git branch` y si deseamos ver las ramas en remoto que estan alineadas en local: `git branch -a`, ojo pero no nos listara todas, si en caso hubieran creado otras recientemente, para estar actualizado de las demas ramas existente ejecutamos el siguiente comando: `$ git fetch origin`, y si queremos que se saquen las referencias a las ramas que ya no existen ejecutamos `$ git fetch -ap`
 
 - Si queremos renombrar el ultimo commit ejecutamos `git commit --amend -m "modificacion del mensaje"`
+
+- Regresar al último commit `git checkout -- .`
 
 Alias de GIT
 
